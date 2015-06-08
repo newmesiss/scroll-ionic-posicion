@@ -1,0 +1,43 @@
+<!--
+<ion-view view-title="Welcome"  >
+            <ion-header-bar ng-class="{scrolling:boolChangeClass}">
+             <ion-nav-bar class="bar-clear "  >
+                <ion-nav-back-button><ion</ion-nav-back-button>
+
+             </ion-nav-bar>
+             </ion-header-bar>
+         <ion-content   style="top:0;" delegate-handle="contentScroll" on-scroll="onContentScroll()" header-shrink scroll-event-interval="5">
+        <div class="map" style="background:url({{local.featured_image.attachment_meta.sizes.large.url}});background-size: cover;">
+
+        </div>
+        <ion-list >
+          <ion-item ng-repeat="item in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]" ng-click="posicion()">Item {{item}}</ion-item>
+
+        </ion-list>
+      </ion-content>
+
+
+
+
+
+
+
+    </ion-view>
+-->
+
+<ion-view>
+  <ion-nav-buttons side="primary">
+    <button class="button" ng-click="getposicion()">
+    posicion
+    </button>
+
+  </ion-nav-buttons>
+   <ion-nav-title> {{posicion}}</ion-nav-title>
+
+  <ion-content>
+<ion-list>
+    <ion-item ng-repeat="inte in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]">item {{item}}</ion-item>
+</ion-list>
+
+</ion-content>
+</ion-view>
