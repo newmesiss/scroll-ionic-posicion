@@ -20,7 +20,6 @@ angular.module('starter.controllers', [])
         }
 
 
-
     })
 
 .controller('CategoriaLocal', function ($state, $scope, $http, $ionicScrollDelegate) {

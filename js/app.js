@@ -58,8 +58,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-
-
   .state('app.locales', {
     url: "/locales",
     views: {
