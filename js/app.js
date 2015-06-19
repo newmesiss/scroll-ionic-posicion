@@ -31,15 +31,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
-
-  .state('app.search', {
-    url: "/search",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/search.html"
-      }
-    }
-  })
   .state('app.home', {
       url: "/home",
       views: {
@@ -49,24 +40,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-.state('app.categorias', {
-      url: "/categorias",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/categorias.html",
-          controller: 'CategoriasCtrl'
-        }
-      }
-    })
-  .state('app.locales', {
-    url: "/locales",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/categoria-locales.html",
-        controller: 'CategoriaLocales'
-      }
-    }
-  })
     .state('app.local', {
     url: "/local",
     views: {
@@ -76,6 +49,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   });
-  // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
 });

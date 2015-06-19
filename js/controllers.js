@@ -4,52 +4,30 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('CategoriasCtrl', function ($scope, $state) {
-    $scope.goToLocales = function () {
-        $state.go('app.locales');
-    };
 
-})
-    .controller('CategoriaLocales', function ($scope, $state) {
-
-
-        $scope.showItem = function () {
-            $state.go('app.local');
-
-
-        }
-
-
-    })
 
 .controller('CategoriaLocal', function ($state, $scope, $http, $ionicScrollDelegate) {
 
+    $scope.contenidoScroll = function () {
+        console.log($ionicScrollDelegate.$getByHandle('contentScroll').getScrollPosition().top);
 
-        $scope.$on('$ionicView.afterEnter', function () {
+    }
 
-            $scope.getposicion = function () {
+    $scope.getPosicion = function () {
 
-
-                $scope.posicion = $ionicScrollDelegate.getScrollPosition().top;
-            }
-
-        });
-
-
-
+        $scope.posicion = $ionicScrollDelegate.$getByHandle('contentScroll').getScrollPosition().top;
+    }
 
 
 
 })
+.controller('HomeCtrl', function ($scope, $state) {
 
+    $scope.Local = function () {
 
-.controller('HomeCtrl', function ($scope,$state ) {
-
-    $scope.cat = function(){
-
-    $state.go('app.categorias');
+        $state.go('app.local');
 
     }
 
 
-    });
+});
